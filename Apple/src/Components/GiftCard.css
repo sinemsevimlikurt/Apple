@@ -1,30 +1,44 @@
-.blue-button {
-    font-size: 17px;
-    line-height: 1.17648;
-    font-weight: 400;
-    letter-spacing: -.022em;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    border-style: solid;
-    border-width: 1px;
-    border: none;
-    min-width: 28px;
-    padding-left: 21px;
-    padding-right: 21px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    --sk-button-margin-horizontal: 18px;
-    --sk-button-margin-vertical: 18px;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    border-radius: 980px;
-    background-color: #0071e3;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.42859;
-    font-weight: 400;
-    letter-spacing: -.016em;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: #fff;
+.gift-header {
+    margin-top: 2%;
+    z-index: 2;
+}
+
+article p {
+    margin-top: 1%;
+    font-size: 46px;
+    font-weight: 600;
+    z-index: 2;
+    font-family: "Tangerine", serif;
+    background: radial-gradient(circle,
+            rgb(252, 203, 107), #ffbeff,
+            rgb(94, 195, 252));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0.3px 0.3px rgba(0, 0, 0, 0.08);
+}
+
+article h2 {
+    z-index: 2;
+}
+
+article button {
+    margin-top: 2%;
+    z-index: 2;
+}
+
+article img {
+    transform: translateX(-50%);
+    top: 12%;
+    left: 50%;
+    position: absolute;
+    z-index: 1;
+    object-fit: none;
+    object-position: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.gift-card {
+    overflow: hidden;
+    position: relative;
 }

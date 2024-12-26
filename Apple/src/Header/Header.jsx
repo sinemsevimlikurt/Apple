@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
+import React from 'react'
+import "./Header.css"
 
 export default function Header() {
+
   const SearchIcon = () => {
     return (
       <div>
@@ -25,22 +28,23 @@ export default function Header() {
   };
 
   return (
-    <div className="header">
-      <ul className="header-list">
-        <li><Link to=""><img src="../public/apple-logo.svg" alt="logo" /></Link></li>
-        <li><Link to="">Store</Link></li>
-        <li><Link to="">Mac</Link></li>
-        <li><Link to="">iPad</Link></li>
-        <li><Link to="">iPhone</Link></li>
-        <li><Link to="">Watch</Link></li>
-        <li><Link to="">AirPods</Link></li>
-        <li><Link to="">TV & Home</Link></li>
-        <li><Link to="">Entertainment</Link></li>
-        <li><Link to="">Accessories</Link></li>
-        <li><Link to="">Support</Link></li>
-        <li><Link to=""><SearchIcon /></Link></li>
-        <li><Link to=""><ShoppingBagIcon /></Link></li>
-      </ul>
-    </div>
+    <header>
+      <ul className="header-ul">
+        <li><Link to="/"><img src="/vite.svg" alt="logo" /></Link></li>
+        <li><Link to="/products">Store</Link></li>
+        <li><Link to="/mac">Mac</Link></li>
+        <li><Link to="/ipad">iPad</Link></li>
+        <li><Link to="/iphone">iPhone</Link></li>
+        <li><Link to="/watch">Watch</Link></li>
+        <li><Link to="/airpods">AirPods</Link></li>
+        <li><Link to="/tv-home">TV & Home</Link></li>
+        <li><Link to="/services">Entertainment</Link></li>
+        <li><Link to="/shop/accessories/all">Accessories</Link></li>
+        <li><Link to="/support">Support</Link></li>
+        <li><Link to="/search"><SearchIcon /></Link></li>
+        <li><Link to="/shop/bag"><ShoppingBagIcon /></Link></li>
+      </ul >
+    </header >
   )
 }
+

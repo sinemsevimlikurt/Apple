@@ -1,53 +1,34 @@
-import "./App.css";
-import MainProductsComponent from "./Components/MainProducts.jsx";
-import NewProducts from "./Components/NewProducts.jsx";
-import Footer from "./Footer/Footer.jsx";
-import Header from "./Header/Header.jsx";
-import React, { useEffect, useState } from "react";
-import "./Components/GiftCard.css"
+import './App.css'
+import Header from './Header/Header'
+import React from 'react';
+import Footer from './Footer/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Pages/Home';
+import ProductsPage from './Pages/ProductsPage';
+import { createBrowserHistory } from 'history';
 
 
 function App() {
-  const [location, setLocation] = useState("");
-
-  useEffect(() => {
-    const userLanguage = navigator.language || navigator.userLanguage;
-    const lang = userLanguage.split("-")[0];
-
-    const locationsByLanguage = {
-      en: "United States",
-      tr: "Türkiye",
-      de: "Deutschland",
-      fr: "France",
-      es: "España",
-      it: "Italia",
-    };
-
-    if (lang in locationsByLanguage) {
-      setLocation(locationsByLanguage[lang]);
-    } else {
-      setLocation("Default Location");
-    }
-  }, []);
-
+  const customHistory = createBrowserHistory();
   return (
+
     <>
-      <header>
+      <Router history={customHistory}>
         <Header />
-      </header>
-      <main>
-        <section>
-          <MainProductsComponent />
-        </section>
-        <section>
-          <NewProducts />
-        </section>
-      </main>
-      <footer>
-        <Footer location={location} />
-      </footer>
+        <Switch >
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/products">
+            <ProductsPage />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </>
-  );
+
+
+  )
 }
 
-export default App;
+export default App

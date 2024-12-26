@@ -1,16 +1,18 @@
 import React from 'react'
-import { mains } from '../sahteVeri'
-import Product from './Product'
+import { mains } from '../../sahteVeri'
+import ProductCard from './ProductCard'
+import "./MainProducts.css"
 
-function MainProductsComponent() {
-
+function MainProducts() {
   return (
-    <div>
+    <section className='main-products top-products' style={{
+      marginTop: "12%", zIndex: "2"
+    }}>
       {mains.map((item, index) => (
-        <Product item={item} key={index} />
+        <ProductCard key={index} item={item} />
       ))}
-    </div>
+    </section>
   )
 }
 
-export default MainProductsComponent
+export default MainProducts

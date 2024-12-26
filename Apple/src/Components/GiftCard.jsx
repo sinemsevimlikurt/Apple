@@ -1,17 +1,17 @@
 import React from 'react'
-
+import "./GiftCard.css"
+import giftCardImage from './Images/gift-card.png'
 
 function GiftCard() {
     return (
-        <Link to="/store">
-            <div className='giftcard-text'>
-                <h1>Sihrinizi konuşturmak için hâlâ vakit var.</h1>
-                <p>Yeni yıl için hediye listenizi tamamlayın.</p>
-            </div>
-            <div className='giftcard-button'>
-                <button className='blue-button'>Hediye Satın Alın</button>
-            </div>
-        </Link>
+        <article className='gift-card'><div className="gift-header">
+            <h2>Sihrinizi konuşturmak için.</h2>
+            <h2>hâlâ vakit var.</h2>
+        </div>
+            <p>Yeni yıl için hediye listenizi tamamlayın.</p>
+            <button className="blue-button" style={{ fontSize: "20px", letterSpacing: "0" }}>Hediye Satın Alın</button>
+            <img src={giftCardImage} alt="Gift Cards" />
+        </article>
     )
 }
 

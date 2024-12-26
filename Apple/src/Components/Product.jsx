@@ -1,21 +1,16 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import { sahteVeri } from '../../sahteVeri'
+import ProductCard from './ProductCard'
+import "./MainProducts.css"
 
-function Product({ item }) {
-    const { id } = useParams()
-
-
+function Products() {
     return (
-        <Link to={`/${id}`} >
-            <div style={{ backgroundImage: item.image }}>
-                <h1>{item.name}</h1>
-                <div>
-                    <button className='blue-button'>Daha Fazla Bilgi</button>
-                    <button className='buy-button'>Satın Al</button>
-                </div>
-            </div>
-        </Link >
+        <section className='main-products products' >
+            {sahteVeri.map((item, index) => (
+                <ProductCard key={index} item={item} />
+            ))}
+        </section>
     )
 }
 
-export default Product 
+export default Products
